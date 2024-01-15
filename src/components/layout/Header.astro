@@ -2,18 +2,18 @@
 const links = [
   {
     ref: '01',
-    name: 'Home',
+    name: 'Accueil',
     href: '/',
   },
   {
     ref: '02',
-    name: 'About',
-    href: '/about',
+    name: 'Psychothérapie',
+    href: '/psychotherapie',
   },
   {
     ref: '03',
-    name: 'Pricing',
-    href: '/pricing',
+    name: 'Tests psychologiques',
+    href: '/tests-psychologiques',
   },
   {
     ref: '04',
@@ -37,14 +37,7 @@ const links = [
         href="/"
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
-        <span class="sr-only">Stone</span>
-        <img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
-        />
+        <h1 class="text-3xl">Dimitri RATIEUVILLE</h1>
       </a>
     </div>
 
@@ -138,12 +131,7 @@ const links = [
       <div
         class="bg-primary-500/10 dark:bg-primary-400/10 hidden items-center justify-center rounded-3xl px-6 py-8 lg:flex"
       >
-        <p
-          class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
-        >
-          <span class="font-medium">Stone</span> is a premium Astro theme specially designed for
-          Business, Marketing, SaaS and Startup websites.
-        </p>
+        <img src="./image-768x694.jpg" class="" />
       </div>
 
       <!-- Navigation -->

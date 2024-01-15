@@ -2,39 +2,36 @@
 const questions = [
   {
     id: 'faq-1',
-    title: 'How do I know which pricing plan is right for me?',
+    title: 'Comment se déroulent les séances ?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      `La 1ère séance vise à analyser vos demandes et vos besoins.
+Il s'agit que vous puissiez expliquer globalement le contexte de vie dans lequel vous êtes ainsi que vos questionnements actuels. Cela permettra ensemble de fixer un objectif thérapeutique et ainsi définir un rythme de séances. 
+Les séances suivantes serviront à effectuer des suivis réguliers afin de progresser à votre rythme et de faire des points ponctuels avec vous concernant l'évolution de vos besoins. 
+Le suivi peut se terminer quand vous vous sentez mieux ou si vous avez atteint l'objectif que vous vous étiez fixés. Même si vous décider d'arrêter, vous pourrez revenir à tout moment si besoin ! `,
   },
   {
     id: 'faq-2',
-    title: 'How can I upgrade, downgrade, or cancel my plan?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+    title: 'Où se trouve le cabinet ?',
+    answer: `Les consultations ont lieu à deux endroits différents dans le Val d'Oise (95)`
   },
   {
     id: 'faq-3',
-    title: "What does 'lifetime access' mean exactly?",
+    title: "Je ne peux pas me déplacer. Comment puis-je faire ?",
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      `En plus des consultations au cabinet, vous avez la possibilité d'effectuer un accompagnement à distance, pour toutes personnes ne pouvant se déplacer ou habitant loin. 
+Contact par téléphone ou mail pour mettre en place un accompagnement en visio.`,
   },
   {
     id: 'faq-4',
-    title: "What does 'free updates' mean exactly?",
+    title: "Combien coûte une séance ?",
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      'Le tarif d\'une séance d\'accompagnement est de 60 euros. (Non remboursé par la sécurité sociale)',
   },
   {
     id: 'faq-5',
-    title: 'Do you offer a free trial?',
+    title: "J'ai un imprévu et je ne peux pas me rendre à mon rendez-vous.",
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-6',
-    title: 'How can I request support?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      `Pensez à annuler votre rendez-vous 24 heures à l'avance si vous ne pouvez l'honorer.`,
   },
 ];
 ---
@@ -43,7 +40,7 @@ const questions = [
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-12 lg:grid-cols-3 lg:gap-8">
       <div>
-        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Frequently asked questions</h2>
+        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Questions fréquentes</h2>
       </div>
       <div class="lg:col-span-2">
         <dl
@@ -88,8 +85,8 @@ const questions = [
                   </button>
                 </dt>
                 <dd class="pb-6 pr-6" id={question.id} x-show="isOpen" x-cloak x-collapse>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
-                    {question.answer}
+                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base" set:html={question.answer}>
+                    
                   </p>
                 </dd>
               </div>

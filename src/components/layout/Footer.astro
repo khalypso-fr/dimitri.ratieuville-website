@@ -3,69 +3,50 @@ const bottomLinks = [
   {
     header: 'Social',
     links: [
-      {
-        name: 'Github',
-        href: 'https://github.com/',
+    {
+        name: 'DoctoLib',
+        href: 'https://www.doctolib.fr/psychologue/ermont/dimitri-ratieuville',
         isExternal: true,
       },
       {
-        name: 'Twitter',
-        href: 'https://twitter.com/',
-        isExternal: true,
-      },
-      {
-        name: 'Instagram',
-        href: 'https://instagram.com/',
-        isExternal: true,
-      },
-      {
-        name: 'Facebook',
-        href: 'https://facebook.com/',
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/dimitri-ratieuville-571912147/',
         isExternal: true,
       },
     ],
   },
   {
-    header: 'Company',
+    header: 'Navigation',
     links: [
       {
-        name: 'Home',
+        name: 'Accueil',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'About',
-        href: '/about',
+        name: 'Psychothérapie',
+        href: '/psychotherapie',
         isExternal: false,
       },
       {
-        name: 'Pricing',
-        href: '/pricing',
+        name: 'Test psychologiques',
+        href: '/tests-psychologiques',
+        isExternal: false,
+      },
+      
+    ],
+  },
+  {
+    header: 'Ressources',
+    links: [
+      {
+        name: 'Mentions légales',
+        href: '/mentions-legales',
         isExternal: false,
       },
       {
         name: 'Contact',
         href: '/contact',
-        isExternal: false,
-      },
-    ],
-  },
-  {
-    header: 'Legal',
-    links: [
-      {
-        name: 'Privacy',
-        href: '/privacy',
-        isExternal: false,
-      },
-      {
-        name: '404',
-        href: '/404',
-        isExternal: false,
-      },
-      {
-        name: 'Styleguide',
-        href: '/styleguide',
         isExternal: false,
       },
     ],
@@ -81,18 +62,11 @@ const bottomLinks = [
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col justify-between gap-12 sm:gap-16 lg:flex-row">
       <div class="flex max-w-sm flex-col items-start gap-6 sm:gap-8">
-        <img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
-        />
+        <h1 class="text-3xl">Dimitri RATIEUVILLE</h1>
         <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
-          Stone is a premium Astro theme specially designed for Business, Marketing, SaaS and
-          Startup websites.
+          Psychologue-clinicien - Psychosociologue du Val d'Oise
         </p>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2023 Stone</p>
+        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© {new Date().getFullYear()} Dimitri RATIEUVILLE</p>
       </div>
 
       <!-- Bottom links -->

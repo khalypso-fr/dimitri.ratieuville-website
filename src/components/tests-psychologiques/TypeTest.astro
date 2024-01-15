@@ -1,0 +1,60 @@
+---
+const pricing = [
+  {
+    name: 'Test Dépression',
+    description: 'Pour toutes personnes ressentant un état de mal-être profond avec apparition de symptômes:',
+    symptomes: [
+    "Tristesse constante",
+    "Perte de désir",
+    "Fatigue intense",
+    "Trouble de l'humeur",
+    "Faible estime de soi",
+    "Idées noires",
+    "Troubles du sommeil"
+    ]
+  },
+  {
+    name: 'Test Burn out',
+    description: `Pour toutes personnes ressentant un mal-être lié au travail  avec apparition de symptômes:`,
+    symptomes: [
+    "Fatigue intense",
+    "Perte de sens au travail",
+    "Perte d'efficacité",
+    "Sentiment d'inutilité",
+    "Culpabilité",
+    "Perte concentration et mémoire",
+    "Psycho-somatisation (douleurs physiques liées au stress au travail)"
+    ]
+  },
+  {
+    name: 'Test Mémoire',
+    description: `Pour toutes personnes séniors, présentant des signes de perte de mémoire ou de démence et/ou pour toutes personnes présentant des pertes cognitives liées à une maladie neurodégénérative (type Alzheimer...)`,
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="-mt-8 grid gap-8 lg:mt-0 lg:grid-cols-3">
+      {
+        pricing.map((item) => (
+          <div
+            class='relative flex flex-col gap-8 rounded-3xl p-8 bg-primary-500/10 dark:bg-primary-400/10'
+          >
+            <div class="flex-1">
+              <h2 class="text-xl font-medium">{item.name}</h2>
+              <p class="text-primary-950/70 dark:text-primary-200/70 mt-6">{item.description}</p>
+            </div>
+            {item.symptomes && <ul class="space-y-3">
+                {item.symptomes.map((feature) => (
+                  <li>
+                    <span>- {feature}</span>
+                  </li>
+                ))}
+              </ul>}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
